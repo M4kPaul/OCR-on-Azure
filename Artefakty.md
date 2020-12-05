@@ -24,7 +24,7 @@
 
 #### Architektura (diagram) (- jakie serwisy Azurowe wybierzenie) 
 
-![Azure Architecture](../../blob/master/images/architecture.png)
+![Azure Architecture](images/architecture.png)
 
 * Azure logic apps, zamiast callback do orchiestracji pracy: wykorzystać for fun/do nauki (często używane, porównać z logic functions) 
 
