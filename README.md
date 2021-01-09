@@ -7,7 +7,7 @@
 3. [Opis funkcjonalności](#opis-funkcjonalności)
 4. [Architektura](#architektura)
 5. [Wybrany stos technologiczny](#wybrany-stos-technologiczny)
-6. [Rozpiska zadań](Rozpiska-zadań)
+6. [Rozpiska zadań](#rozpiska-zadań)
 
 ### Opis projektu: 
 
