@@ -10,8 +10,8 @@
    * [Storage Blobs](#storage-blobs)
    * [Azure Logic App](#azure-logic-app)
    * [Form recognizer](#form-recognizer)
-   * [Cosmos DB](#cosmosdb)
-	* [Power BI](#powerbi)
+   * [Cosmos DB](#cosmos-db)
+	* [Power BI](#power-bi)
 6. [Rozpiska zadań](#rozpiska-zadań)
 
 ## Opis projektu: 
