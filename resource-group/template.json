@@ -18,6 +18,10 @@
             "defaultValue": "wutrpstorage",
             "type": "String"
         },
+        "searchServices_wut_receipt_search_name": {
+            "defaultValue": "wut-receipt-search",
+            "type": "String"
+        },
         "databaseAccounts_receipt_cosmos_name": {
             "defaultValue": "receipt-cosmos",
             "type": "String"
@@ -38,6 +42,10 @@
                 "name": "F0"
             },
             "kind": "FormRecognizer",
+            "identity": {
+                "type": "None",
+                "userAssignedIdentities": {}
+            },
             "properties": {
                 "customSubDomainName": "[parameters('accounts_wut_ocr_on_azure_fr_name')]",
                 "privateEndpointConnections": [],
@@ -91,6 +99,24 @@
                         "backupIntervalInMinutes": 240,
                         "backupRetentionIntervalInHours": 8
                     }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Search/searchServices",
+            "apiVersion": "2020-08-01",
+            "name": "[parameters('searchServices_wut_receipt_search_name')]",
+            "location": "West Europe",
+            "sku": {
+                "name": "free"
+            },
+            "properties": {
+                "replicaCount": 1,
+                "partitionCount": 1,
+                "hostingMode": "Default",
+                "publicNetworkAccess": "Enabled",
+                "networkRuleSet": {
+                    "ipRules": []
                 }
             }
         },
@@ -442,7 +468,7 @@
                         },
                         "HTTP": {
                             "runAfter": {
-                                "Initialize_variable_2": [
+                                "Initialize_variable_3": [
                                     "Succeeded"
                                 ]
                             },
@@ -453,7 +479,7 @@
                                 },
                                 "headers": {
                                     "Content-Type": "application/json",
-                                    "Ocp-Apim-Subscription-Key": ""
+                                    "Ocp-Apim-Subscription-Key": "@variables('OCP-key')"
                                 },
                                 "method": "POST",
                                 "uri": "https://wut-ocr-on-azure-fr.cognitiveservices.azure.com/formrecognizer/v2.1-preview.2/prebuilt/receipt/analyze"
@@ -485,6 +511,23 @@
                                         "name": "receiptRead",
                                         "type": "object",
                                         "value": {}
+                                    }
+                                ]
+                            }
+                        },
+                        "Initialize_variable_3": {
+                            "runAfter": {
+                                "Initialize_variable_2": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "OCP-key",
+                                        "type": "string",
+                                        "value": ""
                                     }
                                 ]
                             }
@@ -585,7 +628,7 @@
                                     "type": "Http",
                                     "inputs": {
                                         "headers": {
-                                            "Ocp-Apim-Subscription-Key": ""
+                                            "Ocp-Apim-Subscription-Key": "@variables('OCP-key')"
                                         },
                                         "method": "GET",
                                         "uri": "@{outputs('HTTP')['headers']['Operation-Location']}"
