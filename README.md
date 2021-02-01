@@ -5,6 +5,7 @@
 1. [Opis projektu](#opis-projektu)
 2. [Zespół](#zespół)
 3. [Opis funkcjonalności](#opis-funkcjonalności)
+4. [Prezentacja działania rozwiązania](#prezentacja-działania-rozwiązania)
 4. [Architektura](#architektura)
 5. [Wybrany stos technologiczny](#wybrany-stos-technologiczny)
    * [Storage Blobs](#storage-blobs)
@@ -32,6 +33,37 @@
 * Dostęp do katalogu ze zdjęciami i danymi 
 * Moduł wyszukiwania 
 * Generowanie statystyk/wykresów 
+
+## Prezentacja działania rozwiązania
+
+1. Aplikacja rozpoczyna działanie po wgraniu pliku w określonym formacie do kontenera w Azure Storage Blob. Format pliku: \<nazwa\>\_\<userID\>\_\<timestamp\>.\<png/jpg/...\>; dwa parametry byłyby automatycznie dodawane przez front-end.
+![image_upload](images/image_upload.png)
+
+2. Po wykryciu nowego pliku w kontenerze zostaje wyzwolony trigger w Logic App. Obecnie jest ustawiony na odświeżanie co minutę, oraz maksymalne przetwarzanie 10 plików jednocześnie (można zwiększyć do 100).
+![logic_app1](images/logic_app1.png)
+
+3. Następnie Logic App inicjalizuje pomocniczne zmienne oraz wysyła zapytanie ze zdjęciem do Form Recognizer. W odpowiedzi w Header otrzymujemy adres, który należy odpytywać i po zakończeniu powinien zwrócić tekst z rachunku w postaci JSON.
+![logic_app2](images/logic_app2.png)
+
+4. Odpytywanie zwróconego adresu.
+![logic_app3](images/logic_app3.png)
+
+5. Zapisujemy wynik w zmiennej i przenosimy plik do folderu z przetworzonymi plikami.
+![logic_app4](images/logic_app4.png)
+![processed](images/processed.png)
+
+6. Zapisujemy wynik a CosmosDB (Obecna wersja sprawdza czy dokument istnieje, jeżeli tak to jedynie go aktualizuje; Produkt końcowy nie miał by tego problemu ze względu na automatycznie zmieniający się timestamp).
+![logic_app5](images/logic_app5.png)
+
+7. Przetworzone dane w Cosmos DB.
+![cosmos_db](images/cosmos_db.png)
+
+8. Możliwość wyszukiwania danych przy pomocy Azure Cognitive Search.
+![cognitive_search](images/cognitive_search.png)
+
+9. Wykresy z Power BI.
+![power_bi](images/power_bi.png)
+
 
 ## Architektura
 
@@ -132,6 +164,6 @@ Pod względem architektonicznym usługa wyszukiwania znajduje się między zewn�
 | 10 | ~~Spotkanie #2~~ | ~~Spotkanie #2~~ | ❌ | 03.01.2020<br/>16.01.2021 |
 | 11 | Połączenie CosmosDB<br/>z PowerBI | | ✅ | 01.02.2021 |
 | 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ✅ | 01.02.2021 |
-| 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ⏳ | 01.02.2021 |
-| 14 | Nagranie wideo | Nagranie wideo | ⏳ | 01.02.2021 |
+| 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ✅ | 01.02.2021 |
+| 14 | ~~Nagranie wideo~~<br/>Prezentacja w README | ~~Nagranie wideo~~<br/>Prezentacja w README | ✖ | 01.02.2021 |
 | 15 | Prezentacja | Prezentacja |  | 01.02.2021 |
