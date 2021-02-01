@@ -166,4 +166,4 @@ Pod względem architektonicznym usługa wyszukiwania znajduje się między zewn�
 | 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ✅ | 01.02.2021 |
 | 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ✅ | 01.02.2021 |
 | 14 | ~~Nagranie wideo~~<br/>Prezentacja w README | ~~Nagranie wideo~~<br/>Prezentacja w README | ✖ | 01.02.2021 |
-| 15 | Prezentacja | Prezentacja |  | 01.02.2021 |
+| 15 | Prezentacja | Prezentacja | ✅ | 01.02.2021 |
