@@ -612,6 +612,17 @@
                                 "runStatus": "Failed"
                             }
                         },
+                        "Terminate_3": {
+                            "runAfter": {
+                                "Create_or_update_document": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Terminate",
+                            "inputs": {
+                                "runStatus": "Succeeded"
+                            }
+                        },
                         "Until": {
                             "actions": {
                                 "Compose": {
