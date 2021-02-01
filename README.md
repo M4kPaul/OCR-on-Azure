@@ -89,11 +89,23 @@ Dostepna jest bezpłatne konto z pierwszymi 400 jednostkami RU/s i 5 GB wolnego 
 
 ### Power BI
 
-#### Dodatki, do sprawdzenia: 
 
- * Azure Cognitive Search - https://azure.microsoft.com/pl-pl/services/search/ 
- * IntelligentKiosk - https://github.com/microsoft/Cognitive-Samples-IntelligentKiosk 
- * https://jfk-demo.azurewebsites.net/ (https://github.com/microsoft/AzureSearch_JFK_Files) 
+
+### Azure Cognitive Search
+
+Usługa Azure Cognitive Search (wcześniej znana jako „Azure Search”) to usługa wyszukiwania w chmurze, która zapewnia programistom interfejsy API i narzędzia do tworzenia bogatego środowiska wyszukiwania w zawartości w aplikacjach internetowych, mobilnych i korporacyjnych.
+
+Usługa wyszukiwania składa się z następujących składników:
+ * Wyszukiwarka do wyszukiwania pełnotekstowego
+ * Trwałe przechowywanie zindeksowanej zawartości należącej do użytkowników
+ * Interfejsy API do indeksowania i wykonywania zapytań
+ * Opcjonalne wzbogacenia oparte na sztucznej inteligencji, tworzenie przeszukiwalnej zawartości z obrazów, tekstu i plików aplikacji
+ * Opcjonalna integracja z innymi usługami platformy Azure w zakresie danych, uczenia maszynowego / sztucznej inteligencji i zabezpieczeń
+
+Pod względem architektonicznym usługa wyszukiwania znajduje się między zewnętrznymi magazynami danych, które zawierają niezindeksowane dane, a aplikacją kliencką, która wysyła żądania zapytań do indeksu wyszukiwania i obsługuje odpowiedź. Zewnętrznie wyszukiwarka może integrować się z innymi usługami platformy Azure w postaci indeksatorów, które automatyzują pozyskiwanie / pobieranie danych ze źródeł danych platformy Azure, oraz zestawów umiejętności, które obejmują sztuczną inteligencję z usług Cognitive Services.
+
+ * Dokumentacja: https://docs.microsoft.com/en-us/azure/search/
+ * Cennik: https://azure.microsoft.com/en-us/pricing/details/search/
 
 
 ## Rozpiska zadań:
@@ -106,19 +118,12 @@ Dostepna jest bezpłatne konto z pierwszymi 400 jednostkami RU/s i 5 GB wolnego 
 | 4 | Zapoznanie się z<br/>omówionymi serwisami | Zapoznanie się z<br/>omówionymi serwisami | ✅ | 05.12.2020<br/>25.12.2020 |
 | 5 | Aktualizacja artefaktów<br/> i architektury | Aktualizacja artefaktów<br/> i architektury | ✅ | 27.12.2020 |
 | 6 | Ustawienie resource group<br/>i wstępnych serwisów | Ustawienie resource group<br/>i wstępnych serwisów | ✅ | 30.12.2020 |
-| 7 | Połączenie Blob z Logic App<br/>i Form Recognizer |  | ✅ | 18.01.2020 |
-| 8 | | Połączenie wyników z Form<br/>Recognizer z CosmosDB | ⏳ | |
-| 9 | Połączenie CosmosDB z PowerBI | |
-| 10 | Spotkanie #2 | Spotkanie #2 |
-| 11 | //TODO? | //TODO? |
-| 12 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury |
-| 13 | Nagranie wideo | Nagranie wideo |
-| 14 | Prezentacja | Prezentacja |
-
-
-#### Extra: Oddanie raport video/ostani tydzień styczeń (również dla reszty grupy): 
-
-   * Jak co działa, jakie modele, jakie problemy czy działa tylko usa 
-   * Część AI, jak dotrenować
-   * Sprzedać info o serwisach 
-   * Diagram PowerBI + Form Recognizer 
+| 7 | Połączenie Blob z Logic App<br/>i Form Recognizer |  | ✅ | 18.01.2021 |
+| 8 | 🔥Panika z resztą zaliczeń🔥 | 🔥Panika z resztą zaliczeń🔥 | 🔥 | 20.12.2020<br/>01.02.2021 |
+| 9 | | Połączenie wyników z Form<br/>Recognizer z CosmosDB | ✅ | 01.02.2021 |
+| 10 | ~~Spotkanie #2~~ | ~~Spotkanie #2~~ | ❌ | 03.01.2020<br/>16.01.2021 |
+| 11 | Połączenie CosmosDB<br/>z PowerBI | | ⏳ | 01.02.2021 |
+| 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ⏳ | 01.02.2021 |
+| 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ⏳ | 01.02.2021 |
+| 14 | Nagranie wideo | Nagranie wideo | ⏳ | 01.02.2021 |
+| 15 | Prezentacja | Prezentacja |  | 01.02.2021 |
