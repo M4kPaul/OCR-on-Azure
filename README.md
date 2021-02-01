@@ -12,6 +12,7 @@
    * [Form recognizer](#form-recognizer)
    * [Cosmos DB](#cosmos-db)
 	* [Power BI](#power-bi)
+	* [Azure Cognitive Search](#azure-cognitive-search) 
 6. [Rozpiska zadań](#rozpiska-zadań)
 
 ## Opis projektu: 
@@ -123,7 +124,7 @@ Pod względem architektonicznym usługa wyszukiwania znajduje się między zewn�
 | 9 | | Połączenie wyników z Form<br/>Recognizer z CosmosDB | ✅ | 01.02.2021 |
 | 10 | ~~Spotkanie #2~~ | ~~Spotkanie #2~~ | ❌ | 03.01.2020<br/>16.01.2021 |
 | 11 | Połączenie CosmosDB<br/>z PowerBI | | ⏳ | 01.02.2021 |
-| 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ⏳ | 01.02.2021 |
+| 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ✅ | 01.02.2021 |
 | 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ⏳ | 01.02.2021 |
 | 14 | Nagranie wideo | Nagranie wideo | ⏳ | 01.02.2021 |
 | 15 | Prezentacja | Prezentacja |  | 01.02.2021 |
