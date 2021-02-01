@@ -11,7 +11,7 @@
    * [Azure Logic App](#azure-logic-app)
    * [Form recognizer](#form-recognizer)
    * [Cosmos DB](#cosmos-db)
-	* [Power BI](#power-bi)
+	* [Power BI (Embedded)](#power-bi-embedded)
 	* [Azure Cognitive Search](#azure-cognitive-search) 
 6. [Rozpiska zadań](#rozpiska-zadań)
 
@@ -88,9 +88,16 @@ Dostepna jest bezpłatne konto z pierwszymi 400 jednostkami RU/s i 5 GB wolnego 
  * Dokumentacja: https://docs.microsoft.com/en-us/azure/cosmos-db/
  * Cennik: https://azure.microsoft.com/en-us/pricing/details/cosmos-db/
 
-### Power BI
+### Power BI (Embedded)
 
+Power BI Embedded to usługa Microsoft Azure, która umożliwia niezależnym dostawcom oprogramowania (ISV) i deweloperom szybkie osadzanie wizualizacji, raportów i dashboardów w aplikacji. To osadzanie odbywa się za pomocą modelu opartego na pojemności, z pomiarem godzinowym. Embedding for customers umożliwia osadzanie dashboardów i raportów dla użytkowników, którzy nie mają konta Power BI. W przypadku klientów i użytkowników bez licencji Power BI można osadzać pulpity nawigacyjne i raporty w niestandardowej aplikacji, używając tego samego interfejsu API do obsługi organizacji lub klientów. W ten sposób użytkownicy widzą dane zarządzane przez aplikację.
 
+Porównaie Power BI Embedded z Power BI Premium
+
+Usługa Power BI Embedded jest przeznaczona dla niezależnych dostawców oprogramowania (ISV) i dla deweloperów, którzy tworzą aplikacje dla swoich klientów. Może być używany jako usługa analizy biznesowej innej firmy, która umożliwia wizualizację danych aplikacji zamiast samodzielnego tworzenia tej usługi. Power BI Embedded to rozwiązanie analityczne typu platforma jako usługa (PaaS), w którym programiści mogą osadzać raporty i pulpity nawigacyjne w aplikacji dla swoich klientów. Power BI Premium to rozwiązanie analityczne typu oprogramowanie jako usługa (SaaS), które zapewnia Twojej organizacji pojedynczy wgląd w najbardziej krytyczne dane biznesowe.
+
+ * Dokumentacja: https://docs.microsoft.com/en-us/power-bi/developer/embedded/
+ * Cennik: https://azure.microsoft.com/en-us/pricing/details/power-bi-embedded/
 
 ### Azure Cognitive Search
 
@@ -123,7 +130,7 @@ Pod względem architektonicznym usługa wyszukiwania znajduje się między zewn�
 | 8 | 🔥Panika z resztą zaliczeń🔥 | 🔥Panika z resztą zaliczeń🔥 | 🔥 | 20.12.2020<br/>01.02.2021 |
 | 9 | | Połączenie wyników z Form<br/>Recognizer z CosmosDB | ✅ | 01.02.2021 |
 | 10 | ~~Spotkanie #2~~ | ~~Spotkanie #2~~ | ❌ | 03.01.2020<br/>16.01.2021 |
-| 11 | Połączenie CosmosDB<br/>z PowerBI | | ⏳ | 01.02.2021 |
+| 11 | Połączenie CosmosDB<br/>z PowerBI | | ✅ | 01.02.2021 |
 | 12 | | Połaczenie CosmosDB<br/>z Cognitive Search | ✅ | 01.02.2021 |
 | 13 | Aktualizacja artefaktów/<br/>diagramu architektury | Aktualizacja artefaktów/<br/>diagramu architektury | ⏳ | 01.02.2021 |
 | 14 | Nagranie wideo | Nagranie wideo | ⏳ | 01.02.2021 |
